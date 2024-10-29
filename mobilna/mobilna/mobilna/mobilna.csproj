@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\k6_0.png" />
+    <None Remove="Images\k6_1.png" />
+    <None Remove="Images\k6_2.png" />
+    <None Remove="Images\k6_3.png" />
+    <None Remove="Images\k6_4.png" />
+    <None Remove="Images\k6_5.png" />
+    <None Remove="Images\k6_6.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\k6_0.png" />
+    <EmbeddedResource Include="Images\k6_1.png" />
+    <EmbeddedResource Include="Images\k6_2.png" />
+    <EmbeddedResource Include="Images\k6_3.png" />
+    <EmbeddedResource Include="Images\k6_4.png" />
+    <EmbeddedResource Include="Images\k6_5.png" />
+    <EmbeddedResource Include="Images\k6_6.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+</Project>

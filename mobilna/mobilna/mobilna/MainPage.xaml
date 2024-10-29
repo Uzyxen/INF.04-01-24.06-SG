@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobilna.MainPage">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+            Spacing="25"
+            BackgroundColor="Beige">
+            <Label
+                Text="Gra w kości. Autor: 00000000000" 
+                BackgroundColor="Brown"
+                TextColor="White"
+                FontSize="Title"
+                Padding="5"/>
+            <Button
+                Text="RZUĆ KOŚĆMI" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"
+                Clicked="DiceRoll"/>
+            <FlexLayout
+                x:Name="FlexContainer"
+                Direction="Row">
+
+                <Image x:Name="Dice0" FlexLayout.Basis="20%" />
+                <Image x:Name="Dice1" FlexLayout.Basis="20%" />
+                <Image x:Name="Dice2" FlexLayout.Basis="20%" />
+                <Image x:Name="Dice3" FlexLayout.Basis="20%" />
+                <Image x:Name="Dice4" FlexLayout.Basis="20%" />
+            </FlexLayout>
+
+            <Label
+                x:Name="RollResultLabel"
+                Text="Wynik tego losowania: 0" 
+                HorizontalTextAlignment="Center"/>
+            <Label
+                x:Name="GameResultLabel"
+                Text="Wynik gry: 0" 
+                HorizontalTextAlignment="Center"/>
+            <Button
+                Text="RESETUJ WYNIK" 
+                BackgroundColor="Chocolate"
+                HorizontalOptions="Center"
+                Clicked="ResetGame"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
