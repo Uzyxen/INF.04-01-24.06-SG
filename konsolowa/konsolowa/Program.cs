@@ -12,7 +12,7 @@
                 int numberOfDice;
                 while (!int.TryParse(Console.ReadLine(), out numberOfDice) || numberOfDice < 3 || numberOfDice > 10)
                 {
-                    Console.WriteLine("Nieprawidłowa liczba. Wprowadź liczbę od 3 do 10: ");
+                    Console.Write("Nieprawidłowa liczba. Wprowadź liczbę od 3 do 10: ");
                 }
 
                 // Rzut kostkami i zapis wyników
@@ -30,6 +30,16 @@
             }
         }
 
+
+
+        /*************************************************
+         nazwa: RollDice
+         opis: Wypełnia liste losowymi liczbami z przedziału od 1 do 6
+         parametry: count - liczba rzutów do wykonania
+
+         zwracany typ i opis: List<T> - zwracana jest lista z elementami typu całkowitego
+         autor: PESEL
+        *************************************************/
         static List<int> RollDice(int count)
         {
             Random rand = new Random();
